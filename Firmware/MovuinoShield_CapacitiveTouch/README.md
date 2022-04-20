@@ -17,4 +17,12 @@ Change the `I2C_ADDRESS` in the header files of the corresponding libraries (*e.
 For this shield, we have differents example depending on the tasks:
 
 ### CapacitiveTouch_Raw
-This program allow us to quickly check if the shield (communication and FT5316) works fine. It prints in raw the data: `2,324,,12,,,543,435,,3;`
+This program allow us to quickly check if the shield (communication and FT5316) works fine. It prints in raw the data: _e.g._ `2,324,,12,,,543,435,,3;`
+
+### CapacitiveTouch_TouchPoints
+This program allow us to visualize the data on a matrix with Processing. The Movuino prints the data with the following structure (see Fig. 1): `zCCxAAAxAAAx...xAAA`
+> ***NOTE:*** `z` for start, `CC` for index of the column, `AAA` for data coming from the capacitiv touch controller (FT5316) and `x` for seperator.
+
+![TouchPoints.png](https://github.com/SensitivePen/Shield_CapacitiveTouch/blob/wim-dev/docs/images/CapacitiveTouch_TouchPointsProcessing.png)
+
+Fig. 1 Overview of TouchPoints with Processing
