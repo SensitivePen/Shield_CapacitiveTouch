@@ -17,8 +17,8 @@ int maxDiameter = 75;       // Max range to display data point
 
 // Sensors
 DataPoint[][] pointGrid;    // Array of data points from the touch surface
-int ROWS = 6;              // number of data point on X axis for touch surface
-int COLS = 4;              // number of data point on Y axis for touch surface
+int ROWS = 4;              // number of data point on X axis for touch surface
+int COLS = 6;              // number of data point on Y axis for touch surface
 int dataCounter = 0;        // count number of incoming data
 long timerDataCounter0 = 0; // timer to compute incoming data rate
 
@@ -39,7 +39,8 @@ void setup()
   // Set serial communication with touch sensors
   println(Serial.list());
   String portName = Serial.list()[0];
-  myPort = new Serial(this, portName, 9600); // initialize serial communication
+  int baudrate=112500;
+  myPort = new Serial(this, portName, baudrate); // initialize serial communication
   arduinoSerial = new ArduinoSerial();
   serialThread = new Thread(arduinoSerial);
   serialThread.start();                       // start serial thread
@@ -63,8 +64,8 @@ void draw()
   // Remap and display data points
   for (int i = 0; i < ROWS; i++) {
     // Get row data range
-    float minRow_ = 0.0;
-    float maxRow_ = 255.0;
+    float minRow_ = 10.0;
+    float maxRow_ = 120.0;
     int sumRow_ = 0;
     for (int j = 0; j < COLS; j++) {
       sumRow_ += pointGrid[i][j].curSRelativeVal;
@@ -80,8 +81,8 @@ void draw()
     // Get remap values for the current row and display data point
     for (int j = 0; j < COLS; j++) {
       pointGrid[i][j].curRemapVal = (pointGrid[i][j].curSRelativeVal - minRow_) / (maxRow_ - minRow_);
-      pointGrid[i][j].curRemapVal *= sumRow_;
-      pointGrid[i][j].curRemapVal /= 255.0; // 1024 = max analog range
+      // pointGrid[i][j].curRemapVal *= sumRow_;
+      // pointGrid[i][j].curRemapVal /= 255.0; // 1024 = max analog range
       pointGrid[i][j].curRemapVal = constrain(pointGrid[i][j].curRemapVal, 0.0, 1.0);
 
       pointGrid[i][j].display(maxDiameter); // display data point
