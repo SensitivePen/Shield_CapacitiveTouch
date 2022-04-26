@@ -30,8 +30,8 @@ class CapacitiveTouch {
     bool updated();
 
     // RAW
-    short grid[NUM_RX][NUM_TX];
-    short calibrateGrid[NUM_RX][NUM_TX];
+    short grid[NUM_TX][NUM_RX];
+    short calibrateGrid[NUM_TX][NUM_RX];
     void calibrate(float variance);
     void setGain(int val);
 
@@ -77,7 +77,7 @@ bool CapacitiveTouch::init(){
     // Init calibrateGrid to zero
     for (unsigned int rxAddr=0;rxAddr<NUM_RX;rxAddr++){
         for(unsigned int txAddr=0;txAddr<NUM_TX;txAddr++){
-                calibrateGrid[rxAddr][txAddr]=0;
+                calibrateGrid[txAddr][rxAddr]=0;
         }
     }
     // setGain(100);
@@ -161,9 +161,9 @@ void CapacitiveTouch::getRawData(){
             unsigned int output = (result[2 * rxAddr] << 8) | (result[2 * rxAddr + 1]);
 
             if(calibrationSteps == CALIBRATION_MAX){
-                grid[rxAddr][txAddr]=output-calibrateGrid[rxAddr][txAddr]+CALIB_THRESHOLD;
+                grid[NUM_TX-1-txAddr][rxAddr]=output-calibrateGrid[NUM_TX-1-txAddr][rxAddr]+CALIB_THRESHOLD;
             } else {
-                grid[rxAddr][txAddr]=output;
+                grid[NUM_TX-1-txAddr][rxAddr]=output;
             }
         }
     }
@@ -180,7 +180,7 @@ void CapacitiveTouch::calibrate(float variance=0.){
         } else {
                 for (unsigned int rxAddr=0;rxAddr<NUM_RX;rxAddr++){
                     for(unsigned int txAddr=0;txAddr<NUM_TX;txAddr++){
-                        calibrateGrid[rxAddr][txAddr]=(grid[rxAddr][txAddr]+calibrateGrid[rxAddr][txAddr])/2;
+                        calibrateGrid[txAddr][rxAddr]=(grid[txAddr][rxAddr]+calibrateGrid[txAddr][rxAddr])/2;
                     }
                 }
         }
@@ -188,6 +188,7 @@ void CapacitiveTouch::calibrate(float variance=0.){
     }
     calibrationDone = true;
     if (DEBUG) Serial.println("Calibration done");
+    delay(1000);
 }
 
 void CapacitiveTouch::setGain(int gain) {
