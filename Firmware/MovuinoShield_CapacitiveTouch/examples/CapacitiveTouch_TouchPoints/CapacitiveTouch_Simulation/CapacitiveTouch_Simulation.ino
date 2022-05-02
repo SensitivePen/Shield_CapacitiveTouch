@@ -4,7 +4,7 @@
 #define ROWS_USE          4
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(112500);
 
 }
 
