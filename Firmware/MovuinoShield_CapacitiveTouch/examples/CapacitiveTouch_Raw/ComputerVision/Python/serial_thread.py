@@ -33,11 +33,12 @@ class SerialThread(threading.Thread):
                 if (self.sr.inWaiting()==0):
                     time.sleep(0.001)
                     continue
-                self.data=self.sr.readline().decode('utf-8')
-                _values=self.data[:-2].split(",")
-                #print("debug: ")
+                try:
+                    self.data=self.sr.readline().decode('utf-8')
+                    _values=self.data[:-2].split(",")
+                except:
+                    _values=None
                 self.buffer.append(_values)
-                # print(self.buffer)
                 self.last_ready=True
             self.sr.close()
     
@@ -51,5 +52,6 @@ class SerialThread(threading.Thread):
             return _last
     
     def stop(self):
+        """Stop the thread"""
         self._stop.set()
 
