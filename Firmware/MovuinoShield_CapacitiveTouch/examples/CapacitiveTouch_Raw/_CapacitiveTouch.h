@@ -11,7 +11,7 @@
 const uint16_t I2C_ADDRESS = 0x38;
 
 #define MODE_TEST           0x40
-#define DEBUG               true
+#define DEBUG               false
 
 // RAW
 #define NUM_TX             21
@@ -19,7 +19,7 @@ const uint16_t I2C_ADDRESS = 0x38;
 
 
 #define CALIBRATION_MAX     15
-#define CALIB_THRESHOLD     20 
+#define CALIB_THRESHOLD     0 
 
 class CapacitiveTouch {
     public:
@@ -50,11 +50,11 @@ CapacitiveTouch::CapacitiveTouch(){}
 bool CapacitiveTouch::init(){
 
     // Setup I2C
-    digitalWrite(SDA,LOW);
-    digitalWrite(SCL,LOW);
+    //digitalWrite(SDA,LOW);
+    //digitalWrite(SCL,LOW);
 
     Wire.begin();
-    Wire.setClock(400000); // 400000 https://www.arduino.cc/en/Reference/WireSetClock
+    Wire.setClock(100000); // 400000 https://www.arduino.cc/en/Reference/WireSetClock
 
     // Initialization: set device mode to test mode
     int stat = 0;
@@ -73,6 +73,7 @@ bool CapacitiveTouch::init(){
     }
 
     if(DEBUG && isInit) Serial.println("CapacitiveTouch initialized.");
+    else if (DEBUG) Serial.println("CapacitiveTouch not init");
     
     // Init calibrateGrid to zero
     for (unsigned int rxAddr=0;rxAddr<NUM_RX;rxAddr++){
@@ -117,10 +118,7 @@ void CapacitiveTouch::autoCalib(){
 //// ============================== UPDATE ==============================
 
 bool CapacitiveTouch::updated(){
-    if (!isInit) {
-        if(DEBUG) Serial.print("CapacitiveTouch not init");
-        return false;
-    } 
+    if (!isInit) return false;
     else {
         getRawData();
         return true;

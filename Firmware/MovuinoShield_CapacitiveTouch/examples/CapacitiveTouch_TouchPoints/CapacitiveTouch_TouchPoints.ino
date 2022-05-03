@@ -10,6 +10,7 @@ void setup() {
   while (!Serial);
   if (DEBUG) Serial.println("CapacitiveTouch get data in zCCxAAAxAAAx...xAAA");
   capa.init();
+  capa.setGain(100);
   delay(100);
   capa.calibrate();
 }
@@ -22,10 +23,10 @@ void loop() {
       Serial.print(txAddr); // the index of the column
       for(int rxAddr=0;rxAddr<NUM_RX_USED;rxAddr++){
           Serial.print("x"); // "x" used as seperator
-          Serial.print(capa.grid[txAddr][rxAddr]);
+          Serial.print(abs(20+capa.grid[txAddr][rxAddr]));
       }
       Serial.println("");
     }
   }
-  delay(50);
+  delay(10);
 }

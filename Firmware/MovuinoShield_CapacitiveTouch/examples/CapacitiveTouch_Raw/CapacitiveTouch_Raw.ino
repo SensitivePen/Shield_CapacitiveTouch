@@ -3,6 +3,8 @@
 #define NUM_TX_USED             4
 #define NUM_RX_USED             6
 
+#define GAIN                    50
+
 CapacitiveTouch capa=CapacitiveTouch();
 
 void setup() {
@@ -10,8 +12,8 @@ void setup() {
   while (!Serial);
   if (DEBUG) Serial.println("CapacitiveTouch get Raw data");
   capa.init();
-  delay(1000);
-  capa.calibrate();
+  capa.setGain(GAIN);
+  delay(100);
 }
 
 void loop() {
@@ -19,12 +21,12 @@ void loop() {
   if(capa.updated()) {
     for (int txAddr=0;txAddr<NUM_TX_USED;txAddr++){
       for(int rxAddr=0;rxAddr<NUM_RX_USED;rxAddr++){
-          raw+=capa.grid[txAddr][rxAddr];
+          raw+=10+abs(capa.grid[txAddr][rxAddr]);
           raw+=",";
       }
     }
     raw.remove(raw.length()-1);
     Serial.println(raw);
   }
-  delay(1);
+  delay(10);
 }
