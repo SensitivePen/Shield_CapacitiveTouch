@@ -1,183 +1,201 @@
-//https://www.newhavendisplay.com/appnotes/datasheets/touchpanel/FT5x16_registers.pdf
-//https://www.buydisplay.com/download/ic/FT5206.pdf
+// https://www.newhavendisplay.com/appnotes/datasheets/touchpanel/FT5x16_registers.pdf
+// https://www.buydisplay.com/download/ic/FT5206.pdf
+// http://optisimon.com/raspberrypi/touch/ft5406/2016/07/13/raspberry-pi-7-inch-touchscreen-hacking/
+
+// https://github.com/azzazza/patch_kernel_q415/blob/master/drivers/input/touchscreen/ft5x06_ts.c
+// https://github.com/optisimon/ft5406-capacitive-touch/blob/master/CapacitanceVisualizer/FT5406.hpp
+// https://github.com/hyvapetteri/touchscreen-cardiography
+
 #include "Wire.h"
 
-const uint16_t I2C_ADDRESS=0x76;
+const uint16_t I2C_ADDRESS = 0x38;
 
-#define MODE_TEST         0x40
+#define MODE_TEST           0x40
+#define DEBUG               true
 
 // RAW
-#define NUM_ROWS          21 // 21
-#define ROW_GAP           17
-#define NUM_COLUMNS       6
+#define NUM_TX             21
+#define NUM_RX             12
 
-#define ROWS_USE          4
 
-#define CALIBRATION_MAX   3
-#define CALIB_THRESHOLD   0
-
-//// ============================== CLASS ==============================
+#define CALIBRATION_MAX     15
+#define CALIB_THRESHOLD     0 
 
 class CapacitiveTouch {
-  public:
+    public:
     CapacitiveTouch();
-    void init(bool raw = false);
-    void begin(bool raw=false);
-
-    //int ROWS_USE = NUM_ROWS - ROW_GAP
-
-    bool poll();
+    bool init();
+    bool isInit = false;
 
     bool updated();
 
-    //RAW
-    bool useRaw = false;
-    short grid[ROWS_USE * NUM_COLUMNS];
-
-    // manual callibration
+    // RAW
+    short grid[NUM_TX][NUM_RX];
+    short calibrateGrid[NUM_TX][NUM_RX];
     void calibrate(float variance);
     void setGain(int val);
 
 
-  private:
-    bool isInit = false;
-    bool calibrationDone = false;
-
-    //RAW
+    private:
+    void autoCalib();
     void getRawData();
-    short calibrateGrid[ROWS_USE * NUM_COLUMNS];
     int calibrationSteps = 0;
+    bool calibrationDone = false;
 };
 
-////  ============================== INITIALIZATION ==============================
+CapacitiveTouch::CapacitiveTouch(){}
 
-CapacitiveTouch::CapacitiveTouch() {}
+//// ============================== INIT ==============================
 
-void CapacitiveTouch::init(bool raw ) {
-  useRaw = raw;
-  digitalWrite(21, LOW);
-  digitalWrite(22, LOW);
+bool CapacitiveTouch::init(){
 
-  Wire.begin();
-  Wire.setClock(400000); // 400000 https://www.arduino.cc/en/Reference/WireSetClock
+    // Setup I2C
+    //digitalWrite(SDA,LOW);
+    //digitalWrite(SCL,LOW);
 
-  // Initialization
- 
-   Wire.beginTransmission(I2C_ADDRESS);
-   Wire.write(byte(0x00));
-   Wire.write(byte(MODE_TEST));
-   Wire.endTransmission(I2C_ADDRESS);
+    Wire.begin();
+    Wire.setClock(400000); // 400000 https://www.arduino.cc/en/Reference/WireSetClock
+
+    // Initialization: set device mode to test mode
+    int stat = 0;
+    Wire.beginTransmission(I2C_ADDRESS);
+    Wire.write(byte(0x00));
+    Wire.write(byte(MODE_TEST));
+    stat = Wire.endTransmission(I2C_ADDRESS);
+
+    if(stat==0) isInit = true;
+    else if(DEBUG) {
+        Serial.print("CapacitiveTouch status:");
+        if (stat == 1 ) Serial.println("1: too long for the buffer");
+        if (stat == 2 ) Serial.println("2: NACK  transmit");
+        if (stat == 3 ) Serial.println("3: NACK transmit data");
+        if (stat == 4 ) Serial.println("4: other ");
+    }
+
+    if(DEBUG && isInit) Serial.println("CapacitiveTouch initialized.");
+    else if (DEBUG) Serial.println("CapacitiveTouch not init");
     
-  delay(100);
-  Serial.println("CapacitiveTouch initialized");
-  delay(100);
-  isInit = true;
+    // Init calibrateGrid to zero
+    for (unsigned int rxAddr=0;rxAddr<NUM_RX;rxAddr++){
+        for(unsigned int txAddr=0;txAddr<NUM_TX;txAddr++){
+                calibrateGrid[txAddr][rxAddr]=0;
+        }
+    }
+    // setGain(100);
+    return isInit;
 }
 
+// NOT working -> calibration not finished
+void CapacitiveTouch::autoCalib(){
+    if (DEBUG) Serial.println("Autocalibration start.");
+    Wire.beginTransmission(I2C_ADDRESS);
+    Wire.write(byte(0x2));
+    Wire.write(byte(0x4));
+    Wire.endTransmission(I2C_ADDRESS);
 
-//// ============================== BEGIN ==============================
-void CapacitiveTouch::begin(bool raw){
-    init(raw);
-    calibrate(1.0);
+    delay(300);
+    for(int i=0;i<100;i++){
+        Wire.beginTransmission(I2C_ADDRESS);
+        Wire.write(0x00);
+        Wire.requestFrom(I2C_ADDRESS,uint8_t(1),false);
+
+        byte reading = Wire.read();
+
+        if ( ((reading & 0x70) >> 4) == 0x0)  // calibration finish
+        {
+            if (DEBUG) Serial.println("Autocalibration done.");
+            break;
+        }
+        delay(100);
+    }
+    // save calibration result
+    Wire.beginTransmission(I2C_ADDRESS);
+    Wire.write(byte(0x02));
+    Wire.write(byte(0x5));
+    Wire.endTransmission(I2C_ADDRESS);
 }
 
 //// ============================== UPDATE ==============================
 
-
-bool CapacitiveTouch::updated() {
- if (!isInit) return false;
- poll();
- if (useRaw) return true;
+bool CapacitiveTouch::updated(){
+    if (!isInit) return false;
+    else {
+        getRawData();
+        return true;
+  }
 }
 
-bool CapacitiveTouch::poll() {
- if (useRaw) {
-   getRawData();
- }
-}
+void CapacitiveTouch::getRawData(){
 
-
-void CapacitiveTouch::getRawData() {
-
-  // Start scan
-  Wire.beginTransmission(I2C_ADDRESS);
-  Wire.write(byte(0x00));
-  Wire.write(byte(0xc0));
-  Wire.endTransmission();
-
-
-  // Read Data
-  for (unsigned int rowAddr = 0; rowAddr < ROWS_USE; rowAddr++) {
-
-    byte result[2  * NUM_COLUMNS];
-
-    //Start transmission
+    // Start scan
     Wire.beginTransmission(I2C_ADDRESS);
-    Wire.write(byte(0x01));
-    Wire.write(rowAddr+ROW_GAP);
-    unsigned int st = Wire.endTransmission();
-    if (st < 0) Serial.print("i2c write failed");
+    Wire.write(byte(0x00));
+    Wire.write(byte(0xc0));
+    Wire.endTransmission();
 
-    delayMicroseconds(100); // Wait at least 100us
+    // Read data
+    for(unsigned int txAddr=0;txAddr<NUM_TX;txAddr++){
+        byte result[2 * NUM_RX];
 
+        // Start transmission
+        Wire.beginTransmission(I2C_ADDRESS);
+        Wire.write(byte(0x01));
+        Wire.write(txAddr);
+        unsigned int st = Wire.endTransmission();
+        if (st < 0 && DEBUG) Serial.println("i2c write failed");
 
-    Wire.beginTransmission(I2C_ADDRESS);
-    Wire.write(0x10); // The address of the first column is 0x10 (16 in decimal).
-    Wire.endTransmission(false);
-    Wire.requestFrom(I2C_ADDRESS, uint8_t(2 * NUM_COLUMNS), false); // TODO : false was added IDK why
-    unsigned int g = 0;
-    while (Wire.available()) {
-      result[g++] = Wire.read();
+        delayMicroseconds(100); // Wait at least 50us
+
+        Wire.beginTransmission(I2C_ADDRESS);
+        Wire.write(0x10);
+        Wire.endTransmission(false);
+        Wire.requestFrom(I2C_ADDRESS,uint8_t(2*NUM_RX),false);
+        unsigned int g = 0;
+        while (Wire.available()) {
+            result[g++] = Wire.read();
+        }
+
+        for (unsigned int rxAddr=0;rxAddr<NUM_RX;rxAddr++){
+            unsigned int output = (result[2 * rxAddr] << 8) | (result[2 * rxAddr + 1]);
+
+            if(calibrationSteps == CALIBRATION_MAX){
+                grid[NUM_TX-1-txAddr][rxAddr]=output-calibrateGrid[NUM_TX-1-txAddr][rxAddr]+CALIB_THRESHOLD;
+            } else {
+                grid[NUM_TX-1-txAddr][rxAddr]=output;
+            }
+        }
     }
-
-
-    for (unsigned int col = 0; col < NUM_COLUMNS; col++) {
-      unsigned  int output = (result[2 * col] << 8) | (result[2 * col + 1]); // Get High and Low bytes for an intersection of row and column
-
-      if (calibrationSteps == CALIBRATION_MAX) {
-        grid[(rowAddr * NUM_COLUMNS) +  NUM_COLUMNS - col - 1] = CALIB_THRESHOLD + output - calibrateGrid[(rowAddr * NUM_COLUMNS) +  NUM_COLUMNS - col - 1];
-      } else {
-        calibrateGrid[(rowAddr * NUM_COLUMNS) +  NUM_COLUMNS - col - 1] = output;
-        grid[(rowAddr * NUM_COLUMNS) +  NUM_COLUMNS - col - 1] = output;
-      }
-    }
-
-
-  } // End foreachrow
-
 }
-
 
 //// ============================== CALIBRATION ==============================
 
-void CapacitiveTouch::calibrate(float variance){
-  calibrationSteps = 0;
-  while (calibrationSteps != CALIBRATION_MAX) {
-    getRawData();
-    if (grid[0] < 5000) return;
-    if (calibrationSteps == 0 && !calibrationDone) {
-      memcpy(calibrateGrid, grid, sizeof(grid));
+void CapacitiveTouch::calibrate(float variance=0.){
+    while (calibrationSteps != CALIBRATION_MAX){
+        getRawData();
+        if (grid[0][0] < 5000) return;
+        if (calibrationSteps == 0 && !calibrationDone){
+            memcpy(calibrateGrid,grid,sizeof(grid));
+        } else {
+                for (unsigned int rxAddr=0;rxAddr<NUM_RX;rxAddr++){
+                    for(unsigned int txAddr=0;txAddr<NUM_TX;txAddr++){
+                        calibrateGrid[txAddr][rxAddr]=(grid[txAddr][rxAddr]+calibrateGrid[txAddr][rxAddr])/2;
+                    }
+                }
+        }
+        calibrationSteps++;
     }
-    else {
-      for (int i = 0; i < (ROWS_USE * NUM_COLUMNS); i++) {
-        calibrateGrid[i] = (calibrateGrid[i] + grid[i]) /2;//(variance * grid[i]);
-      }
-    }
-    //Serial.println("Calibrate");
-    calibrationSteps++;
-  }
-  calibrationDone = true;
+    calibrationDone = true;
+    if (DEBUG) Serial.println("Calibration done");
+    delay(1000);
 }
 
 void CapacitiveTouch::setGain(int gain) {
-  Wire.beginTransmission(I2C_ADDRESS);
-  Wire.write(byte(0x07));
-  Wire.write(byte(gain));
-  Wire.endTransmission();
+    Wire.beginTransmission(I2C_ADDRESS);
+    Wire.write(byte(0x07));
+    Wire.write(byte(gain));
+    Wire.endTransmission(I2C_ADDRESS);
+    if(DEBUG){
+        Serial.print("Gain set to ");
+        Serial.println((gain));
+    }
 }
-
-
-//https://www.buydisplay.com/download/ic/FT5206.pdf + https://github.com/optisimon/ft5406-capacitive-touch/blob/master/CapacitanceVisualizer/FT5406.hpp
-// https://github.com/hyvapetteri/touchscreen-cardiography + http://optisimon.com/raspberrypi/touch/ft5406/2016/07/13/raspberry-pi-7-inch-touchscreen-hacking/
-//https://www.newhavendisplay.com/app_notes/FT5x16.pdf + https://www.newhavendisplay.com/appnotes/datasheets/touchpanel/FT5x16_registers.pdf
-//https://github.com/azzazza/patch_kernel_q415/blob/master/drivers/input/touchscreen/ft5x06_ts.c
