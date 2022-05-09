@@ -14,7 +14,7 @@ NUM_TX=4
 NUM_RX=6
 
 MIN=10
-MAX=100
+MAX=150
 matrix=np.zeros((NUM_TX,NUM_RX))
 
 baudrate=115200
@@ -25,7 +25,7 @@ def _toArray(data)->None:
             matrix[tx][rx]=int(data[tx*NUM_RX+rx])
 
 def plotMatrix()->None:
-    plt.imshow(matrix,cmap='inferno',origin='lower',vmin=MIN,vmax=MAX)
+    plt.imshow(matrix,interpolation='bilinear',cmap='inferno',origin='lower',vmin=MIN,vmax=MAX)
     plt.colorbar() 
     plt.show()
 
@@ -74,10 +74,11 @@ def main()->None:
         serial_thread=SerialThread(port=port,baudrate=baudrate,buffer_size=2)
         serial_thread.start()
         plt.ion() #Tell matplotlib you want interactive mode to plot live data
+        plt.figure(figsize=(NUM_RX*2,NUM_TX*2))
         while True:
             data=serial_thread.get_last_values()
             if data is None:
-                time.sleep(0.001)
+                time.sleep(0.0001)
                 continue
             _toArray(data)
             drawnow(plotMatrix)

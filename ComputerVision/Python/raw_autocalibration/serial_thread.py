@@ -35,7 +35,8 @@ class SerialThread(threading.Thread):
                     continue
                 try:
                     self.data=self.sr.readline().decode('utf-8')
-                    _values=self.data[:-2].split(",")
+                    _split=self.data[:-2].split(",")
+                    _values=[int(value) for value in _split]
                 except:
                     _values=None
                 self.buffer.append(_values)
