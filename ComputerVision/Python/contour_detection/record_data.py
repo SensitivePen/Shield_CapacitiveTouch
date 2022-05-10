@@ -1,4 +1,5 @@
 import glob
+import numpy as np
 import os
 import serial
 import sys
@@ -8,10 +9,11 @@ from serial_thread import SerialThread
 from typing import List
 
 baudrate = 115200
-filename='sample1'
-period=1 # time (in seconds) the long it's record
+filename = 'sample.npy'
+period = 1  # the time it's recording (in seconds)
 
-def serial_ports()->List[str]:
+
+def serial_ports() -> List[str]:
     """ Lists serial port names
 
         :raises EnvironmentError:
@@ -39,32 +41,39 @@ def serial_ports()->List[str]:
             pass
     return result
 
-def select_port()->str:
+
+def select_port() -> str:
     ports = serial_ports()
-    if(len(ports)>0):
+    if(len(ports) > 0):
         for i in range(len(ports)):
             print(f"{i}: {ports[i]}")
-        index=input("Select your port: ")
+        index = input("Select your port: ")
         os.system('cls' if os.name == 'nt' else 'clear')
         return ports[int(index)]
     print("No ports available")
     return None
 
-def main()->None:
+
+def main() -> None:
     port = select_port()
     if port is not None:
-        serial_thread=SerialThread(port=port,baudrate=baudrate,buffer_size=2)
+        serial_thread = SerialThread(port=port, baudrate=baudrate, buffer_size=2)
         serial_thread.start()
         time.sleep(2)
-        t_0=time.time()
-        with open(filename+'.txt','w') as f:
-            while time.time()-t_0<period:
-                data=serial_thread.get_last_values()
-                if data is None:
-                    time.sleep(0.0001)
-                    continue
-                f.write(','.join(str(value) for value in data)+'\n')
+        t_0 = time.time()
+        recorded = None
+        while time.time()-t_0 < period:
+            data = serial_thread.get_last_values()
+            if data is None:
+                time.sleep(0.0001)
+                continue
+            if recorded is None:
+                recorded = data
+            else:
+                recorded = np.append(recorded, data, axis=0)
+        np.save(filename, recorded)
         serial_thread.stop()
-        
-if __name__=="__main__":
+
+
+if __name__ == "__main__":
     main()
