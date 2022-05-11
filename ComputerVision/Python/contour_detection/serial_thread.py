@@ -1,3 +1,4 @@
+import numpy as np
 import serial
 import threading
 import time
@@ -36,14 +37,15 @@ class SerialThread(threading.Thread):
                 try:
                     self.data=self.sr.readline().decode('utf-8')
                     _split=self.data[:-2].split(",")
-                    _values=[int(value) for value in _split]
+                    _values=np.array(_split,dtype=np.int32)
+                    _values=np.expand_dims(_values,axis=0)
                 except:
                     _values=None
                 self.buffer.append(_values)
                 self.last_ready=True
             self.sr.close()
     
-    def get_last_values(self)->List[int]:
+    def get_last_values(self)->np.ndarray:
         """Return the last element of the serial stream"""
         with _lock:
             if not self.last_ready:
