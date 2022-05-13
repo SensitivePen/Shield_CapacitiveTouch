@@ -1,35 +1,19 @@
 import glob
-import matplotlib.pyplot as plt
 import numpy as np
 import os
-import sys
 import serial
+import sys
 import time
 
-from drawnow import *
 from serial_thread import SerialThread
 from typing import List
 
-NUM_TX=4
-NUM_RX=6
+baudrate = 115200
+filename = 'sample.npy'
+period = 1  # the time it's recording (in seconds)
 
-MIN=10
-MAX=100
-matrix=np.zeros((NUM_TX,NUM_RX))
 
-baudrate=115200
-
-def _toArray(data)->None:
-    for tx in range(NUM_TX):
-        for rx in range(NUM_RX):
-            matrix[tx][rx]=int(data[tx*NUM_RX+rx])
-
-def plotMatrix()->None:
-    plt.imshow(matrix,cmap='inferno',origin='lower',vmin=MIN,vmax=MAX)
-    plt.colorbar() 
-    plt.show()
-
-def serial_ports()->List[str]:
+def serial_ports() -> List[str]:
     """ Lists serial port names
 
         :raises EnvironmentError:
@@ -57,35 +41,39 @@ def serial_ports()->List[str]:
             pass
     return result
 
-def select_port()->str:
+
+def select_port() -> str:
     ports = serial_ports()
-    if(len(ports)>0):
+    if(len(ports) > 0):
         for i in range(len(ports)):
             print(f"{i}: {ports[i]}")
-        index=input("Select your port: ")
+        index = input("Select your port: ")
         os.system('cls' if os.name == 'nt' else 'clear')
         return ports[int(index)]
     print("No ports available")
     return None
 
-def main()->None:
+
+def main() -> None:
     port = select_port()
     if port is not None:
-        serial_thread=SerialThread(port=port,baudrate=baudrate,buffer_size=2)
+        serial_thread = SerialThread(port=port, baudrate=baudrate, buffer_size=2)
         serial_thread.start()
-        plt.ion() #Tell matplotlib you want interactive mode to plot live data
-        while True:
-            data=serial_thread.get_last_values()
+        time.sleep(2)
+        t_0 = time.time()
+        recorded = None
+        while time.time()-t_0 < period:
+            data = serial_thread.get_last_values()
             if data is None:
-                time.sleep(0.001)
+                time.sleep(0.0001)
                 continue
-            _toArray(data)
-            drawnow(plotMatrix)
-            plt.pause(0.0001)
-            if len(plt.get_fignums())==0:
-                break
-        plt.close()
+            if recorded is None:
+                recorded = data
+            else:
+                recorded = np.append(recorded, data, axis=0)
+        np.save(filename, recorded)
         serial_thread.stop()
-            
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     main()
