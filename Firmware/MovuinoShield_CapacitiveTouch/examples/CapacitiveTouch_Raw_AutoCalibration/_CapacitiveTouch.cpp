@@ -3,7 +3,7 @@
 #define MODE_TEST           0x40
 
 #define CALIBRATION_MAX     15
-#define CALIB_THRESHOLD     0 
+#define CALIB_THRESHOLD     10 
 
 CapacitiveTouch::CapacitiveTouch(uint8_t address):
   address(address){

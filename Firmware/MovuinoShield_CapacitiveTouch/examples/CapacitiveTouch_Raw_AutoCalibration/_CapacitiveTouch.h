@@ -11,7 +11,7 @@
 
 #define I2C_ADDRESS         0x38
 
-#define DEBUG               true
+#define DEBUG               false
 
 // RAW
 #define NUM_TX             21

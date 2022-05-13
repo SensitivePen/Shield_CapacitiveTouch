@@ -33,12 +33,12 @@ void loop() {
   if(capa.updated()) {
     for (int txAddr=0;txAddr<NUM_TX_USED;txAddr++){
       for(int rxAddr=0;rxAddr<NUM_RX_USED;rxAddr++){
-          raw+=10+abs(capa.grid[txAddr][rxAddr]);
+          raw+=int(abs(capa.grid[txAddr][rxAddr]));
           raw+=",";
       }
     }
     raw.remove(raw.length()-1);
     Serial.println(raw);
   }
-  delay(10);
+  delay(1);
 }
