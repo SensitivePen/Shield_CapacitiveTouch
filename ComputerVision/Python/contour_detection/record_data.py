@@ -9,9 +9,13 @@ from serial_thread import SerialThread
 from typing import List
 
 baudrate = 115200
-filename = 'sample.npy'
-period = 1  # the time it's recording (in seconds)
+filename = 'sample'
+recorded_time = 1  # (in seconds)
 
+TO_TXT = False
+
+if TO_TXT: filename=filename+'.txt'
+else: filename=filename+'.npy'
 
 def serial_ports() -> List[str]:
     """ Lists serial port names
@@ -62,7 +66,7 @@ def main() -> None:
         time.sleep(2)
         t_0 = time.time()
         recorded = None
-        while time.time()-t_0 < period:
+        while time.time()-t_0 < recorded_time:
             data = serial_thread.get_last_values()
             if data is None:
                 time.sleep(0.0001)
@@ -71,9 +75,9 @@ def main() -> None:
                 recorded = data
             else:
                 recorded = np.append(recorded, data, axis=0)
-        np.save(filename, recorded)
+        if TO_TXT: np.savetxt(filename,recorded,fmt='%i',delimiter=',')
+        else: np.save(filename, recorded)
         serial_thread.stop()
-
 
 if __name__ == "__main__":
     main()
