@@ -1,0 +1,9 @@
+(module 1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9)
+  (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value D (at 0 0.5) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
+)
