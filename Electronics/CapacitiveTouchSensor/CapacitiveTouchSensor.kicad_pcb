@@ -2,10 +2,10 @@
 
   (general
     (thickness 1.6)
-    (drawings 18)
-    (tracks 250)
+    (drawings 9)
+    (tracks 146)
     (zones 0)
-    (modules 151)
+    (modules 68)
     (nets 13)
   )
 
@@ -20,7 +20,7 @@
     (36 B.SilkS user hide)
     (37 F.SilkS user hide)
     (38 B.Mask user hide)
-    (39 F.Mask user hide)
+    (39 F.Mask user)
     (40 Dwgs.User user)
     (41 Cmts.User user hide)
     (42 Eco1.User user hide)
@@ -34,9 +34,12 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.3)
     (user_trace_width 0.3)
-    (trace_clearance 0.1)
+    (user_trace_width 3.8)
+    (user_trace_width 5.5)
+    (user_trace_width 5.7)
+    (trace_clearance 0.2)
     (zone_clearance 0.508)
     (zone_45_only no)
     (trace_min 0.2)
@@ -102,11 +105,11 @@
   (net 8 8)
   (net 9 9)
   (net 10 10)
-  (net 11 12)
-  (net 12 11)
+  (net 11 11)
+  (net 12 GND)
 
   (net_class Default "This is the default net class."
-    (clearance 0.1)
+    (clearance 0.2)
     (trace_width 0.25)
     (via_dia 0.8)
     (via_drill 0.4)
@@ -115,7 +118,6 @@
     (add_net 1)
     (add_net 10)
     (add_net 11)
-    (add_net 12)
     (add_net 2)
     (add_net 3)
     (add_net 4)
@@ -124,10 +126,815 @@
     (add_net 7)
     (add_net 8)
     (add_net 9)
+    (add_net GND)
   )
 
-  (module Connector_FPCB:Conn_FCPB_12 (layer F.Cu) (tedit 62A332DD) (tstamp 62A30C5A)
-    (at 173.7 39.056)
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A75FBA)
+    (at 212.51 100)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 7 7))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A75FAA)
+    (at 212.51 105.77)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 6 6))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A75FF2)
+    (at 212.51 111.54)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 5 5))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A75FEA)
+    (at 212.51 117.31)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 4 4))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A7601E)
+    (at 212.51 123.08)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 3 3))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A75FC2)
+    (at 212.51 128.85)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 2 2))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A76896) (tstamp 62A76016)
+    (at 212.51 134.62)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 1 1))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76929)
+    (at 219.51 100)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 7 7))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76931)
+    (at 226.51 100)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 7 7))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76939)
+    (at 233.51 100)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 7 7))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76941)
+    (at 240.51 100)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 7 7))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76952)
+    (at 219.51 105.77)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 6 6))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A7695A)
+    (at 226.51 105.77)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 6 6))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76962)
+    (at 233.51 105.77)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 6 6))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A7696A)
+    (at 240.51 105.77)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 6 6))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A7697B)
+    (at 219.51 111.54)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 5 5))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76983)
+    (at 226.51 111.54)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 5 5))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A7698B)
+    (at 233.51 111.54)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 5 5))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76993)
+    (at 240.51 111.54)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 5 5))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76A9C)
+    (at 219.51 123.08)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 3 3))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AA4)
+    (at 226.51 123.08)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 3 3))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AAC)
+    (at 233.51 123.08)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 3 3))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AB4)
+    (at 240.51 123.08)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 3 3))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AC0)
+    (at 219.51 128.85)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 2 2))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AC8)
+    (at 226.51 128.85)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 2 2))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AD0)
+    (at 233.51 128.85)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 2 2))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AD8)
+    (at 240.51 128.85)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 2 2))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AE4)
+    (at 219.51 117.31)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 4 4))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AEC)
+    (at 226.51 117.31)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 4 4))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AF4)
+    (at 233.51 117.31)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 4 4))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A09DA9) (tstamp 62A76AFC)
+    (at 240.51 117.31)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 4 4))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A76896) (tstamp 62A76B08)
+    (at 219.51 134.62)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 1 1))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A76896) (tstamp 62A76B10)
+    (at 226.51 134.62)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 1 1))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A76896) (tstamp 62A76B18)
+    (at 233.51 134.62)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 1 1))
+  )
+
+  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A76896) (tstamp 62A76B20)
+    (at 240.51 134.62)
+    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.1) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
+      (net 1 1))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A75FBE)
+    (at 216.01 97.115)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A75FB6)
+    (at 223.01 97.115)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76012)
+    (at 230.01 97.115)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76002)
+    (at 237.01 97.115)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D45)
+    (at 216.01 102.885)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D4D)
+    (at 216.01 108.655)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D55)
+    (at 216.01 114.425)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D5D)
+    (at 216.01 120.195)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D65)
+    (at 216.01 125.965)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D6D)
+    (at 216.01 131.735)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7697A) (tstamp 62A76D75)
+    (at 216.01 137.505)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 8 8))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76D81)
+    (at 230.01 102.885)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76D89)
+    (at 230.01 108.655)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76D91)
+    (at 230.01 114.425)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76D99)
+    (at 230.01 120.195)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76DA1)
+    (at 230.01 125.965)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76DA9)
+    (at 230.01 131.735)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76982) (tstamp 62A76DB1)
+    (at 230.01 137.505)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 10 10))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DBD)
+    (at 223.01 102.885)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DC5)
+    (at 223.01 108.655)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DCD)
+    (at 223.01 114.425)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DD5)
+    (at 223.01 120.195)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DDD)
+    (at 223.01 125.965)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DE5)
+    (at 223.01 131.735)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A76976) (tstamp 62A76DED)
+    (at 223.01 137.505)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 9 9))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76DF9)
+    (at 237.01 102.885)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76E01)
+    (at 237.01 108.655)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76E09)
+    (at 237.01 114.425)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76E11)
+    (at 237.01 120.195)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76E19)
+    (at 237.01 125.965)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76E21)
+    (at 237.01 131.735)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A7698D) (tstamp 62A76E29)
+    (at 237.01 137.505)
+    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value D (at 0 0.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
+      (net 11 11))
+  )
+
+  (module Connector_FPCB:Conn_FCPB_12 (layer F.Cu) (tedit 62A75EAE) (tstamp 62A71F43)
+    (at 225.51 43.856)
     (path /62A21DA4)
     (fp_text reference J1 (at 4.4 0.7) (layer F.SilkS)
       (effects (font (size 0.801457 0.801457) (thickness 0.15)))
@@ -135,1526 +942,10 @@
     (fp_text value Conn_FPCB_12 (at 0.3 2.1) (layer F.Fab)
       (effects (font (size 0.800693 0.800693) (thickness 0.15)))
     )
-    (pad 1 smd rect (at -2.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 2 smd rect (at -2.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 3 smd rect (at -1.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 4 smd rect (at -1.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 5 smd rect (at -0.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 6 smd rect (at -0.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 7 smd rect (at 0.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 8 smd rect (at 0.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 9 smd rect (at 1.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 10 smd rect (at 1.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 11 smd rect (at 2.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-    (pad 12 smd rect (at 2.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A30D35)
-    (at 182.2 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A30D31)
-    (at 168.2 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A30D2D)
-    (at 175.2 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A30D29)
-    (at 175.2 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A30D1D)
-    (at 182.2 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A30D15)
-    (at 161.2 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30D01)
-    (at 171.7 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A30CFD)
-    (at 161.2 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CF9)
-    (at 178.7 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A30CF5)
-    (at 175.2 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30CF1)
-    (at 171.7 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30CED)
-    (at 171.7 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30CE9)
-    (at 171.7 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30CE5)
-    (at 171.7 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CE1)
-    (at 178.7 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A30CDD)
-    (at 182.2 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30CD9)
-    (at 171.7 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CD5)
-    (at 178.7 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CD1)
-    (at 178.7 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CCD)
-    (at 178.7 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30CC9)
-    (at 171.7 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CC5)
-    (at 178.7 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A30CC1)
-    (at 168.2 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30CBD)
-    (at 178.7 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A30CB9)
-    (at 154.2 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30CB5)
-    (at 164.7 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A30CB1)
-    (at 154.2 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A30CAD)
-    (at 154.2 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A30CA5)
-    (at 154.2 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30CA1)
-    (at 157.7 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A30C9D)
-    (at 178.7 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A30C8D)
-    (at 154.2 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A30C81)
-    (at 154.2 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A30C7D)
-    (at 171.7 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C79)
-    (at 164.7 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C75)
-    (at 164.7 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A30C71)
-    (at 154.2 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C56)
-    (at 157.7 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C52)
-    (at 157.7 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C4E)
-    (at 157.7 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C4A)
-    (at 157.7 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C46)
-    (at 157.7 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C42)
-    (at 164.7 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C3E)
-    (at 164.7 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C3A)
-    (at 157.7 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A30C36)
-    (at 157.7 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C32)
-    (at 164.7 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C2E)
-    (at 164.7 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A30C2A)
-    (at 164.7 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A30BA0)
-    (at 161.2 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A30B9C)
-    (at 175.2 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A30B98)
-    (at 175.2 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A30B94)
-    (at 182.2 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A30B90)
-    (at 161.2 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A30B8C)
-    (at 182.2 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A30B88)
-    (at 161.2 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A30B84)
-    (at 161.2 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A30B80)
-    (at 168.2 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A30B7C)
-    (at 168.2 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A30B78)
-    (at 175.2 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A30B74)
-    (at 168.2 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A30B70)
-    (at 175.2 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A30B6C)
-    (at 182.2 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A30B68)
-    (at 161.2 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A30B64)
-    (at 168.2 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A30B60)
-    (at 182.2 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A30B5C)
-    (at 168.2 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A27240)
-    (at 135 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 1 1))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A2722B)
-    (at 135 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 2 2))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A27216)
-    (at 135 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 3 3))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A27201)
-    (at 135 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 4 4))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A271EC)
-    (at 135 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 5 5))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A271D7)
-    (at 135 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 6 6))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A271C1)
-    (at 135 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 7 7))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A27145)
-    (at 128 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 1 1))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A2713D)
-    (at 121 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 1 1))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A27135)
-    (at 114 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 1 1))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A2712D)
-    (at 107 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 1 1))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A27118)
-    (at 128 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 2 2))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A27110)
-    (at 121 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 2 2))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A27108)
-    (at 114 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 2 2))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A27100)
-    (at 107 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 2 2))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A270EB)
-    (at 128 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 3 3))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A270E3)
-    (at 121 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 3 3))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A270DB)
-    (at 114 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 3 3))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A270D3)
-    (at 107 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 3 3))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A270BE)
-    (at 128 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 4 4))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A270B6)
-    (at 121 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 4 4))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A270AE)
-    (at 114 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 4 4))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A270A6)
-    (at 107 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 4 4))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A27091)
-    (at 128 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 5 5))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A27089)
-    (at 121 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 5 5))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A27081)
-    (at 114 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 5 5))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A27079)
-    (at 107 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 5 5))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A27064)
-    (at 128 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 7 7))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A2705C)
-    (at 121 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 7 7))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A27054)
-    (at 114 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 7 7))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A2704C)
-    (at 107 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 7 7))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A2702D)
-    (at 128 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 6 6))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A27025)
-    (at 121 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 6 6))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A2701D)
-    (at 114 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 6 6))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A27015)
-    (at 107 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 6 6))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F6E)
-    (at 124.5 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F66)
-    (at 124.5 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F5E)
-    (at 124.5 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F56)
-    (at 124.5 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F4E)
-    (at 124.5 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F46)
-    (at 124.5 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A26F3E)
-    (at 124.5 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26F2D)
-    (at 117.5 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26F25)
-    (at 117.5 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26F1D)
-    (at 117.5 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26F15)
-    (at 117.5 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26F0D)
-    (at 117.5 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26F05)
-    (at 117.5 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A26EFD)
-    (at 117.5 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26EE5)
-    (at 110.5 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26EDD)
-    (at 110.5 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26ED5)
-    (at 110.5 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26ECD)
-    (at 110.5 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26EC5)
-    (at 110.5 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26EBD)
-    (at 110.5 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A26EB5)
-    (at 110.5 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26EA4)
-    (at 103.5 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26E9C)
-    (at 103.5 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26E94)
-    (at 103.5 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26E8C)
-    (at 103.5 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26E84)
-    (at 103.5 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26E7C)
-    (at 103.5 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A26E74)
-    (at 103.5 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Connector_FPCB:Conn_FCPB_12 (layer F.Cu) (tedit 62A20A2B) (tstamp 62A26C8D)
-    (at 119.5 39.056)
-    (path /62A21DA4)
-    (fp_text reference J1 (at 4.4 0.7) (layer F.SilkS)
-      (effects (font (size 0.801457 0.801457) (thickness 0.15)))
-    )
-    (fp_text value Conn_FPCB_12 (at 0.3 2.1) (layer F.Fab)
-      (effects (font (size 0.800693 0.800693) (thickness 0.15)))
-    )
-    (pad 12 smd rect (at 2.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask)
-      (net 11 12))
+    (pad GND smd rect (at 2.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask)
+      (net 12 GND))
     (pad 11 smd rect (at 2.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask)
-      (net 12 11))
+      (net 11 11))
     (pad 10 smd rect (at 1.75 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask)
       (net 10 10))
     (pad 9 smd rect (at 1.25 -0.706) (size 0.3048 1.2954) (layers B.Cu B.Paste B.Mask)
@@ -1677,524 +968,172 @@
       (net 1 1))
   )
 
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20B09) (tstamp 62A1FE39)
-    (at 131.5 137.505)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
+  (gr_line (start 244.01 85.4) (end 244.01 142) (layer Edge.Cuts) (width 0.05) (tstamp 62A760C0))
+  (gr_line (start 244.01 85.4) (end 228.76 85.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A760BF))
+  (gr_line (start 222.26 85.4) (end 222.26 42.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A760BE))
+  (gr_line (start 205.01 85.4) (end 222.26 85.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A75F66))
+  (gr_line (start 205.01 142) (end 205.01 85.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A75F65))
+  (gr_line (start 228.76 85.4) (end 228.76 42.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A75F64))
+  (dimension 39 (width 0.15) (layer Dwgs.User) (tstamp 62A75F62)
+    (gr_text "39.000 mm" (at 224.51 146.719999) (layer Dwgs.User) (tstamp 62A75F62)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
+    (feature1 (pts (xy 244.01 142) (xy 244.01 146.00642)))
+    (feature2 (pts (xy 205.01 142) (xy 205.01 146.00642)))
+    (crossbar (pts (xy 205.01 145.419999) (xy 244.01 145.419999)))
+    (arrow1a (pts (xy 244.01 145.419999) (xy 242.883496 146.00642)))
+    (arrow1b (pts (xy 244.01 145.419999) (xy 242.883496 144.833578)))
+    (arrow2a (pts (xy 205.01 145.419999) (xy 206.136504 146.00642)))
+    (arrow2b (pts (xy 205.01 145.419999) (xy 206.136504 144.833578)))
   )
+  (gr_line (start 244.01 142) (end 205.01 142) (layer Edge.Cuts) (width 0.05) (tstamp 62A75F61))
+  (gr_line (start 228.76 42.4) (end 222.26 42.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A75F60))
 
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20B02) (tstamp 62A1FE31)
-    (at 131.5 131.735)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A0CBA0) (tstamp 62A1FD89)
-    (at 100 134.62)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 1 1))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D4D) (tstamp 62A1FD81)
-    (at 100 128.85)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 2 2))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20AFC) (tstamp 62A12835)
-    (at 131.5 125.965)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20AF6) (tstamp 62A1282D)
-    (at 131.5 120.195)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20AEE) (tstamp 62A12825)
-    (at 131.5 114.425)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20AE8) (tstamp 62A1281D)
-    (at 131.5 108.655)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20AE0) (tstamp 62A12815)
-    (at 131.5 102.885)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20AD7) (tstamp 62A10073)
-    (at 131.5 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 11 12))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20C9F) (tstamp 62A0FDF8)
-    (at 124.5 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 12 11))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D16) (tstamp 62A0FDF0)
-    (at 117.5 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 10 10))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D22) (tstamp 62A0FDE8)
-    (at 110.5 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 9 9))
-  )
-
-  (module Diamond_Pattern:1_Diamond_BOTTOM (layer F.Cu) (tedit 62A20D29) (tstamp 62A0FCE7)
-    (at 103.5 97.115)
-    (fp_text reference D (at 0 0.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers B.Cu)
-      (net 8 8))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D52) (tstamp 62A0F8AE)
-    (at 100 123.08)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 3 3))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D5B) (tstamp 62A0F886)
-    (at 100 117.31)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 4 4))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D62) (tstamp 62A0F85E)
-    (at 100 111.54)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 5 5))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D69) (tstamp 62A0F836)
-    (at 100 105.77)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 6 6))
-  )
-
-  (module Diamond_Pattern:1_Diamond_TOP (layer F.Cu) (tedit 62A20D6F) (tstamp 62A0F804)
-    (at 100 100)
-    (fp_text reference D (at 0 4.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value D (at 0 0.1) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" smd rect (at 0 0 45) (size 3.54 3.54) (layers F.Cu)
-      (net 7 7))
-  )
-
-  (dimension 45.5 (width 0.15) (layer Dwgs.User)
-    (gr_text "45.500 mm" (at 115.25 146.639999) (layer Dwgs.User)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (feature1 (pts (xy 138 142) (xy 138 145.92642)))
-    (feature2 (pts (xy 92.5 142) (xy 92.5 145.92642)))
-    (crossbar (pts (xy 92.5 145.339999) (xy 138 145.339999)))
-    (arrow1a (pts (xy 138 145.339999) (xy 136.873496 145.92642)))
-    (arrow1b (pts (xy 138 145.339999) (xy 136.873496 144.753578)))
-    (arrow2a (pts (xy 92.5 145.339999) (xy 93.626504 145.92642)))
-    (arrow2b (pts (xy 92.5 145.339999) (xy 93.626504 144.753578)))
-  )
-  (dimension 38.5 (width 0.15) (layer Dwgs.User)
-    (gr_text "38.500 mm" (at 165.95 146.719999) (layer Dwgs.User)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (feature1 (pts (xy 185.2 142) (xy 185.2 146.00642)))
-    (feature2 (pts (xy 146.7 142) (xy 146.7 146.00642)))
-    (crossbar (pts (xy 146.7 145.419999) (xy 185.2 145.419999)))
-    (arrow1a (pts (xy 185.2 145.419999) (xy 184.073496 146.00642)))
-    (arrow1b (pts (xy 185.2 145.419999) (xy 184.073496 144.833578)))
-    (arrow2a (pts (xy 146.7 145.419999) (xy 147.826504 146.00642)))
-    (arrow2b (pts (xy 146.7 145.419999) (xy 147.826504 144.833578)))
-  )
-  (gr_line (start 185.2 142) (end 146.7 142) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D40))
-  (gr_line (start 176.95 85.4) (end 176.95 37.6) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D3F))
-  (gr_line (start 146.7 142) (end 146.7 85.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D3E))
-  (gr_line (start 146.7 85.4) (end 170.45 85.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D3D))
-  (gr_line (start 176.95 37.6) (end 170.45 37.6) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D3C))
-  (gr_line (start 185.2 85.4) (end 185.2 142) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D3B))
-  (gr_line (start 170.45 85.4) (end 170.45 37.6) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D3A))
-  (gr_line (start 185.2 85.4) (end 176.95 85.4) (layer Edge.Cuts) (width 0.05) (tstamp 62A30D39))
-  (gr_line (start 122.75 37.6) (end 116.25 37.6) (layer Edge.Cuts) (width 0.05) (tstamp 62A30833))
-  (gr_line (start 116.25 85.4) (end 116.25 37.6) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 122.75 85.4) (end 122.75 37.6) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 138 85.4) (end 122.75 85.4) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 92.5 85.4) (end 116.25 85.4) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 92.5 142) (end 92.5 85.4) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 138 142) (end 92.5 142) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 138 85.4) (end 138 142) (layer Edge.Cuts) (width 0.05))
-
-  (via (at 155.12 87.15) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BA4))
-  (segment (start 147.73999 92.964775) (end 147.73999 133.84999) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BAC))
-  (segment (start 155.12 87.15) (end 153.554765 87.15) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BAD))
-  (segment (start 147.73999 133.84999) (end 148.51 134.62) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BAE))
-  (segment (start 153.554765 87.15) (end 147.73999 92.964775) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB0))
-  (segment (start 150.2 134.62) (end 154.2 134.62) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB8))
-  (segment (start 170.38998 87.15) (end 170.94998 86.59) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BB9))
-  (segment (start 170.94998 38.35002) (end 170.95 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BBD))
-  (segment (start 154.2 134.62) (end 182.2 134.62) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BC3))
-  (segment (start 155.12 87.15) (end 170.38998 87.15) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BCE))
-  (segment (start 148.51 134.62) (end 150.2 134.62) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BD4))
-  (segment (start 170.95 86.59) (end 170.95 38.35002) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BDA))
-  (via (at 155.12 88.05) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BA5))
-  (segment (start 148.24 93.171885) (end 148.24 128.16) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BAF))
-  (segment (start 148.24 128.16) (end 148.93 128.85) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BBB))
-  (segment (start 154.2 128.85) (end 182.2 128.85) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BBC))
-  (segment (start 171.44999 87.36) (end 171.44999 38.35001) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BC4))
-  (segment (start 155.12 88.05) (end 170.75999 88.05) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BC6))
-  (segment (start 171.44999 38.35001) (end 171.45 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BD3))
-  (segment (start 150.2 128.85) (end 154.2 128.85) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BD5))
-  (segment (start 153.361885 88.05) (end 148.24 93.171885) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BD6))
-  (segment (start 170.75999 88.05) (end 171.44999 87.36) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BD7))
-  (segment (start 155.12 88.05) (end 153.361885 88.05) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BD9))
-  (segment (start 148.93 128.85) (end 150.2 128.85) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BDB))
-  (via (at 155.12 88.95) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BAA))
-  (segment (start 149.75 123.08) (end 150.2 123.08) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB1))
-  (segment (start 171.95 39.294) (end 171.95 88.4) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BB2))
-  (segment (start 171.95 39.294) (end 171.95 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BB3))
-  (segment (start 148.82 93.299005) (end 148.82 122.15) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB5))
-  (segment (start 155.12 88.95) (end 153.169005 88.95) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BC2))
-  (segment (start 153.169005 88.95) (end 148.82 93.299005) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BC5))
-  (segment (start 171.95 88.4) (end 171.4 88.95) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BD0))
-  (segment (start 154.2 123.08) (end 182.2 123.08) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BD1))
-  (segment (start 150.2 123.08) (end 154.2 123.08) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BD8))
-  (segment (start 148.82 122.15) (end 149.75 123.08) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BDC))
-  (segment (start 171.4 88.95) (end 155.12 88.95) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BDD))
-  (via (at 155.12 89.85) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BA8))
-  (segment (start 172.45 89.09) (end 172.45 39.294) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BAB))
-  (segment (start 149.32497 115.78497) (end 150.85 117.31) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB4))
-  (segment (start 149.32497 93.430445) (end 149.32497 115.78497) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB6))
-  (segment (start 150.85 117.31) (end 154.2 117.31) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BB7))
-  (segment (start 152.905415 89.85) (end 149.32497 93.430445) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BBE))
-  (segment (start 172.45 39.294) (end 172.45 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BC0))
-  (segment (start 171.69 89.85) (end 172.45 89.09) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BC1))
-  (segment (start 155.12 89.85) (end 171.69 89.85) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BC7))
-  (segment (start 154.2 117.31) (end 182.2 117.31) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BC8))
-  (segment (start 155.12 89.85) (end 152.905415 89.85) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BDF))
-  (via (at 155.12 90.75) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BA7))
-  (segment (start 151.48 111.54) (end 154.2 111.54) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BCA))
-  (segment (start 149.77498 109.83498) (end 151.48 111.54) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BCB))
-  (segment (start 149.77498 93.616845) (end 149.77498 109.83498) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BCC))
-  (segment (start 152.641825 90.75) (end 149.77498 93.616845) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BCD))
-  (segment (start 155.12 90.75) (end 152.641825 90.75) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BCF))
-  (segment (start 172.09 90.75) (end 155.12 90.75) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BD2))
-  (segment (start 154.2 111.54) (end 182.2 111.54) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BE9))
-  (segment (start 172.95 39.294) (end 172.95 89.89) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF7))
-  (segment (start 172.95 89.89) (end 172.09 90.75) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF9))
-  (segment (start 172.95 39.294) (end 172.95 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C00))
-  (via (at 155.12 91.65) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BA6))
-  (segment (start 155.12 91.65) (end 172.6 91.65) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BE3))
-  (segment (start 155.12 91.65) (end 152.378235 91.65) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BE6))
-  (segment (start 173.45 90.8) (end 173.45 79.294) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BFA))
-  (segment (start 154.2 105.77) (end 182.2 105.77) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BFB))
-  (segment (start 151.75 105.77) (end 154.2 105.77) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BFC))
-  (segment (start 172.6 91.65) (end 173.45 90.8) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BFF))
-  (segment (start 152.378235 91.65) (end 150.22499 93.803245) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30C09))
-  (segment (start 150.22499 104.24499) (end 151.75 105.77) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30C0A))
-  (segment (start 173.45 39.294) (end 173.45 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C0C))
-  (segment (start 150.22499 93.803245) (end 150.22499 104.24499) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30C0F))
-  (segment (start 173.45 79.294) (end 173.45 39.294) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C12))
-  (via (at 155.12 92.55) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 0) (tstamp 62A30BA9))
-  (segment (start 150.7 99.12) (end 151.58 100) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BE0))
-  (segment (start 150.7 94) (end 150.7 99.12) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BE4))
-  (segment (start 173.95 39.294) (end 173.95 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BE5))
-  (segment (start 155.12 92.55) (end 152.15 92.55) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BEC))
-  (segment (start 152.15 92.55) (end 150.7 94) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30BF0))
-  (segment (start 172.8 92.54997) (end 155.99003 92.54997) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF8))
-  (segment (start 173.95 39.294) (end 173.95 91.39997) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BFD))
-  (segment (start 155.99 92.55) (end 155.12 92.55) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C01))
-  (segment (start 154.2 100) (end 182.2 100) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30C02))
-  (segment (start 155.99003 92.54997) (end 155.99 92.55) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C07))
-  (segment (start 154.2 100) (end 151.58 100) (width 0.3) (layer F.Cu) (net 0) (tstamp 62A30C0B))
-  (segment (start 173.95 91.39997) (end 172.8 92.54997) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C0D))
-  (segment (start 174.45 92.35) (end 173.8 93) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BEA))
-  (segment (start 158.19002 92.99998) (end 157.7 93.49) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF2))
-  (segment (start 164.84004 93) (end 164.84002 92.99998) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BFE))
-  (segment (start 157.7 93.49) (end 157.7 97.115) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C03))
-  (segment (start 157.7 137.505) (end 157.7 97.115) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C04))
-  (segment (start 174.45 38.35) (end 174.45 92.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C05))
-  (segment (start 164.84002 92.99998) (end 158.19002 92.99998) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C10))
-  (segment (start 173.8 93) (end 164.84004 93) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C11))
-  (segment (start 165.16001 93.44999) (end 164.7 93.91) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BE1))
-  (segment (start 174.95 39.294) (end 174.95 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BE2))
-  (segment (start 164.7 97.115) (end 164.7 137.505) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BE7))
-  (segment (start 174.6336 93.44999) (end 165.16001 93.44999) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF5))
-  (segment (start 174.95 39.294) (end 174.95 93.13359) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF6))
-  (segment (start 164.7 93.91) (end 164.7 97.115) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C06))
-  (segment (start 174.95 93.13359) (end 174.6336 93.44999) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C08))
-  (segment (start 171.7 94.25) (end 171.7 97.115) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BE8))
-  (segment (start 172.05 93.9) (end 171.7 94.25) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BEB))
-  (segment (start 174.82 93.9) (end 172.05 93.9) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BED))
-  (segment (start 175.45 93.27) (end 174.82 93.9) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BEE))
-  (segment (start 175.45 79.294) (end 175.45 93.27) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF1))
-  (segment (start 175.45 79.294) (end 175.45 40.51) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30BF3))
-  (segment (start 175.45 39.294) (end 175.45 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C13))
-  (segment (start 175.45 39.294) (end 175.45 40.51) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C16))
-  (segment (start 171.7 137.505) (end 171.7 97.115) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C28))
-  (segment (start 175.95 39.43) (end 175.95 38.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C15))
-  (segment (start 178.15 93.35) (end 176.34 93.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C19))
-  (segment (start 178.7 97.115) (end 178.7 93.9) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C1A))
-  (segment (start 175.95 39.43) (end 175.95 79.294) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C1B))
-  (segment (start 175.95 88.51) (end 175.95 79.294) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C1D))
-  (segment (start 176.34 93.35) (end 175.95 92.96) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C1E))
-  (segment (start 178.7 93.9) (end 178.15 93.35) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C1F))
-  (segment (start 175.95 92.96) (end 175.95 88.51) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C20))
-  (segment (start 178.7 97.115) (end 178.7 137.505) (width 0.3) (layer B.Cu) (net 0) (tstamp 62A30C26))
-  (via (at 100.92 87.15) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 1) (tstamp 62A1FF77))
-  (segment (start 94.31 134.62) (end 96 134.62) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 93.53999 133.84999) (end 94.31 134.62) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 93.53999 92.964775) (end 93.53999 133.84999) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 99.354765 87.15) (end 93.53999 92.964775) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 96 134.62) (end 100 134.62) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 100.92 87.15) (end 99.354765 87.15) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 100 134.62) (end 128 134.62) (width 0.3) (layer F.Cu) (net 1))
-  (segment (start 116.74998 38.35002) (end 116.75 38.35) (width 0.3) (layer B.Cu) (net 1))
-  (segment (start 116.18998 87.15) (end 116.74998 86.59) (width 0.3) (layer B.Cu) (net 1))
-  (segment (start 116.75 86.59) (end 116.75 38.35002) (width 0.3) (layer B.Cu) (net 1))
-  (segment (start 100.92 87.15) (end 116.18998 87.15) (width 0.3) (layer B.Cu) (net 1))
-  (segment (start 128 134.62) (end 134.72499 134.62) (width 0.3) (layer F.Cu) (net 1))
-  (via (at 100.92 88.05) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 2) (tstamp 62A1FF75))
-  (segment (start 94.73 128.85) (end 96 128.85) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 96 128.85) (end 100 128.85) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 94.04 93.171885) (end 94.04 128.16) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 99.161885 88.05) (end 94.04 93.171885) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 94.04 128.16) (end 94.73 128.85) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 100.92 88.05) (end 99.161885 88.05) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 100 128.85) (end 128 128.85) (width 0.3) (layer F.Cu) (net 2))
-  (segment (start 117.24999 38.35001) (end 117.25 38.35) (width 0.3) (layer B.Cu) (net 2))
-  (segment (start 117.24999 87.36) (end 117.24999 38.35001) (width 0.3) (layer B.Cu) (net 2))
-  (segment (start 116.55999 88.05) (end 117.24999 87.36) (width 0.3) (layer B.Cu) (net 2))
-  (segment (start 100.92 88.05) (end 116.55999 88.05) (width 0.3) (layer B.Cu) (net 2))
-  (segment (start 128 128.85) (end 134.72499 128.85) (width 0.3) (layer F.Cu) (net 2))
-  (via (at 100.92 88.95) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 3) (tstamp 62A1C043))
-  (segment (start 96 123.08) (end 100 123.08) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 95.55 123.08) (end 96 123.08) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 94.62 122.15) (end 95.55 123.08) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 94.62 93.299005) (end 94.62 122.15) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 98.969005 88.95) (end 94.62 93.299005) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 100.92 88.95) (end 98.969005 88.95) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 117.2 88.95) (end 100.92 88.95) (width 0.3) (layer B.Cu) (net 3))
-  (segment (start 117.75 88.4) (end 117.2 88.95) (width 0.3) (layer B.Cu) (net 3))
-  (segment (start 117.75 39.294) (end 117.75 88.4) (width 0.3) (layer B.Cu) (net 3))
-  (segment (start 117.75 39.294) (end 117.75 38.35) (width 0.3) (layer B.Cu) (net 3))
-  (segment (start 100 123.08) (end 128 123.08) (width 0.3) (layer F.Cu) (net 3))
-  (segment (start 128 123.08) (end 134.72499 123.08) (width 0.3) (layer F.Cu) (net 3))
-  (via (at 100.92 89.85) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 4) (tstamp 62A1C046))
-  (segment (start 95.12497 115.78497) (end 96.65 117.31) (width 0.3) (layer F.Cu) (net 4))
-  (segment (start 95.12497 93.430445) (end 95.12497 115.78497) (width 0.3) (layer F.Cu) (net 4))
-  (segment (start 96.65 117.31) (end 100 117.31) (width 0.3) (layer F.Cu) (net 4))
-  (segment (start 98.705415 89.85) (end 95.12497 93.430445) (width 0.3) (layer F.Cu) (net 4))
-  (segment (start 100.92 89.85) (end 98.705415 89.85) (width 0.3) (layer F.Cu) (net 4))
-  (segment (start 118.25 39.294) (end 118.25 38.35) (width 0.3) (layer B.Cu) (net 4))
-  (segment (start 118.25 89.09) (end 118.25 39.294) (width 0.3) (layer B.Cu) (net 4))
-  (segment (start 117.49 89.85) (end 118.25 89.09) (width 0.3) (layer B.Cu) (net 4))
-  (segment (start 100.92 89.85) (end 117.49 89.85) (width 0.3) (layer B.Cu) (net 4))
-  (segment (start 100 117.31) (end 128 117.31) (width 0.3) (layer F.Cu) (net 4))
-  (segment (start 128 117.31) (end 134.72499 117.31) (width 0.3) (layer F.Cu) (net 4))
-  (via (at 100.92 90.75) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 5) (tstamp 62A1C04C))
-  (segment (start 97.28 111.54) (end 100 111.54) (width 0.3) (layer F.Cu) (net 5))
-  (segment (start 95.57498 109.83498) (end 97.28 111.54) (width 0.3) (layer F.Cu) (net 5))
-  (segment (start 95.57498 93.616845) (end 95.57498 109.83498) (width 0.3) (layer F.Cu) (net 5))
-  (segment (start 98.441825 90.75) (end 95.57498 93.616845) (width 0.3) (layer F.Cu) (net 5))
-  (segment (start 100.92 90.75) (end 98.441825 90.75) (width 0.3) (layer F.Cu) (net 5))
-  (segment (start 117.89 90.75) (end 100.92 90.75) (width 0.3) (layer B.Cu) (net 5))
-  (segment (start 118.75 89.89) (end 117.89 90.75) (width 0.3) (layer B.Cu) (net 5))
-  (segment (start 118.75 39.294) (end 118.75 89.89) (width 0.3) (layer B.Cu) (net 5))
-  (segment (start 118.75 39.294) (end 118.75 38.35) (width 0.3) (layer B.Cu) (net 5))
-  (segment (start 100 111.54) (end 128 111.54) (width 0.3) (layer F.Cu) (net 5))
-  (segment (start 128 111.54) (end 134.72499 111.54) (width 0.3) (layer F.Cu) (net 5))
-  (via (at 100.92 91.65) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 6) (tstamp 62A1C049))
-  (segment (start 100.92 91.65) (end 118.4 91.65) (width 0.3) (layer B.Cu) (net 6))
-  (segment (start 119.25 90.8) (end 119.25 79.294) (width 0.3) (layer B.Cu) (net 6))
-  (segment (start 118.4 91.65) (end 119.25 90.8) (width 0.3) (layer B.Cu) (net 6))
-  (segment (start 97.55 105.77) (end 100 105.77) (width 0.3) (layer F.Cu) (net 6))
-  (segment (start 96.02499 104.24499) (end 97.55 105.77) (width 0.3) (layer F.Cu) (net 6))
-  (segment (start 96.02499 93.803245) (end 96.02499 104.24499) (width 0.3) (layer F.Cu) (net 6))
-  (segment (start 98.178235 91.65) (end 96.02499 93.803245) (width 0.3) (layer F.Cu) (net 6))
-  (segment (start 100.92 91.65) (end 98.178235 91.65) (width 0.3) (layer F.Cu) (net 6))
-  (segment (start 119.25 79.294) (end 119.25 39.294) (width 0.3) (layer B.Cu) (net 6))
-  (segment (start 119.25 39.294) (end 119.25 38.35) (width 0.3) (layer B.Cu) (net 6))
-  (segment (start 100 105.77) (end 128 105.77) (width 0.3) (layer F.Cu) (net 6))
-  (segment (start 128 105.77) (end 134.72499 105.77) (width 0.3) (layer F.Cu) (net 6))
-  (via (at 100.92 92.55) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 7) (tstamp 62A1C04F))
-  (segment (start 96.5 94) (end 96.5 99.12) (width 0.3) (layer F.Cu) (net 7) (tstamp 62A1C03D))
-  (segment (start 96.5 99.12) (end 97.38 100) (width 0.3) (layer F.Cu) (net 7) (tstamp 62A1C037))
-  (segment (start 100 100) (end 97.38 100) (width 0.3) (layer F.Cu) (net 7))
-  (segment (start 97.95 92.55) (end 96.5 94) (width 0.3) (layer F.Cu) (net 7))
-  (segment (start 100.92 92.55) (end 97.95 92.55) (width 0.3) (layer F.Cu) (net 7))
-  (segment (start 101.79 92.55) (end 100.92 92.55) (width 0.3) (layer B.Cu) (net 7))
-  (segment (start 101.79003 92.54997) (end 101.79 92.55) (width 0.3) (layer B.Cu) (net 7))
-  (segment (start 118.6 92.54997) (end 101.79003 92.54997) (width 0.3) (layer B.Cu) (net 7))
-  (segment (start 119.75 91.39997) (end 118.6 92.54997) (width 0.3) (layer B.Cu) (net 7))
-  (segment (start 119.75 39.294) (end 119.75 91.39997) (width 0.3) (layer B.Cu) (net 7))
-  (segment (start 119.75 39.294) (end 119.75 38.35) (width 0.3) (layer B.Cu) (net 7))
-  (segment (start 100 100) (end 128 100) (width 0.3) (layer F.Cu) (net 7))
-  (segment (start 128 100) (end 134.72499 100) (width 0.3) (layer F.Cu) (net 7))
-  (segment (start 103.5 137.505) (end 103.5 97.115) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 103.5 93.49) (end 103.5 97.115) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 103.99002 92.99998) (end 103.5 93.49) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 110.64004 93) (end 110.64002 92.99998) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 110.64002 92.99998) (end 103.99002 92.99998) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 119.6 93) (end 110.64004 93) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 120.25 92.35) (end 119.6 93) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 120.25 38.35) (end 120.25 92.35) (width 0.3) (layer B.Cu) (net 8))
-  (segment (start 110.5 93.91) (end 110.5 97.115) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 110.96001 93.44999) (end 110.5 93.91) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 120.4336 93.44999) (end 110.96001 93.44999) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 120.75 93.13359) (end 120.4336 93.44999) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 120.75 39.294) (end 120.75 93.13359) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 120.75 39.294) (end 120.75 38.35) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 110.5 97.115) (end 110.5 137.505) (width 0.3) (layer B.Cu) (net 9))
-  (segment (start 117.5 94.25) (end 117.5 97.115) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 117.85 93.9) (end 117.5 94.25) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 120.62 93.9) (end 117.85 93.9) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 121.25 93.27) (end 120.62 93.9) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 121.25 79.294) (end 121.25 93.27) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 121.25 79.294) (end 121.25 40.51) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 121.25 39.294) (end 121.25 40.51) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 121.25 39.294) (end 121.25 38.35) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 117.5 137.505) (end 117.5 97.115) (width 0.3) (layer B.Cu) (net 10))
-  (segment (start 131.5 93.63) (end 131.5 97.115) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 130.76999 92.89999) (end 131.5 93.63) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 122.57 92.89999) (end 130.76999 92.89999) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 122.25 92.57999) (end 122.57 92.89999) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 122.25 79.294) (end 122.25 92.57999) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 122.25 79.294) (end 122.25 40.12) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 122.227401 38.372599) (end 122.25 38.35) (width 0.25) (layer B.Cu) (net 11))
-  (segment (start 122.23 40.12) (end 122.227401 40.117401) (width 0.25) (layer B.Cu) (net 11))
-  (segment (start 122.25 40.12) (end 122.23 40.12) (width 0.25) (layer B.Cu) (net 11))
-  (segment (start 122.25 40.12) (end 122.25 38.35) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 131.5 137.505) (end 131.5 97.115) (width 0.3) (layer B.Cu) (net 11))
-  (segment (start 121.75 88.51) (end 121.75 79.294) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 121.75 92.96) (end 121.75 88.51) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 122.14 93.35) (end 121.75 92.96) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 123.95 93.35) (end 122.14 93.35) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 124.5 93.9) (end 123.95 93.35) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 124.5 97.115) (end 124.5 93.9) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 121.75 39.43) (end 121.75 79.294) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 121.75 39.43) (end 121.75 38.35) (width 0.3) (layer B.Cu) (net 12))
-  (segment (start 124.5 97.115) (end 124.5 137.505) (width 0.3) (layer B.Cu) (net 12))
+  (segment (start 228.26 43.15) (end 228.26 44.5) (width 0.3) (layer B.Cu) (net 12) (tstamp 62A760EC))
+  (segment (start 228.26 44.5) (end 228.32 44.56) (width 0.3) (layer B.Cu) (net 12) (tstamp 62A760EB))
+  (via (at 228.32 44.56) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 12) (tstamp 62A760C1))
+  (segment (start 206.04999 133.84999) (end 206.82 134.62) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A7608C))
+  (segment (start 222.76 86.59) (end 222.76 43.15) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A7608D))
+  (segment (start 208.51 134.62) (end 212.51 134.62) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A76091))
+  (segment (start 206.04999 92.964775) (end 206.04999 133.84999) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A76094))
+  (segment (start 206.82 134.62) (end 208.51 134.62) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A76096))
+  (segment (start 222.19998 87.15) (end 222.75998 86.59) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A76089))
+  (segment (start 211.864765 87.15) (end 206.04999 92.964775) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A76095))
+  (segment (start 213.43 87.15) (end 211.864765 87.15) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A76088))
+  (segment (start 213.43 87.15) (end 222.19998 87.15) (width 0.3) (layer B.Cu) (net 1) (tstamp 62A760D5))
+  (segment (start 212.51 134.62) (end 240.51 134.62) (width 0.3) (layer B.Cu) (net 1))
+  (segment (start 223.25999 43.15) (end 223.25999 87.65001) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 208.51 128.85) (end 212.51 128.85) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 207.24 128.85) (end 208.51 128.85) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 206.55 128.16) (end 207.24 128.85) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 206.55 93.171885) (end 206.55 128.16) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 211.671885 88.05) (end 206.55 93.171885) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 223.25999 87.65001) (end 222.86 88.05) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 222.86 88.05) (end 211.671885 88.05) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 212.51 128.85) (end 240.51 128.85) (width 0.3) (layer B.Cu) (net 2))
+  (segment (start 207.13 93.499005) (end 211.479005 89.15) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 207.13 122.15) (end 207.13 93.499005) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 208.06 123.08) (end 207.13 122.15) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 212.51 123.08) (end 208.06 123.08) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 211.98999 88.65001) (end 211.49 89.15) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 223.025689 88.65001) (end 211.98999 88.65001) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 223.76 87.915699) (end 223.025689 88.65001) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 223.76 43.15) (end 223.76 87.915699) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 212.51 123.08) (end 240.51 123.08) (width 0.3) (layer B.Cu) (net 3))
+  (segment (start 209.16 117.31) (end 212.51 117.31) (width 0.3) (layer B.Cu) (net 4) (tstamp 62A7609B))
+  (segment (start 207.63497 115.78497) (end 209.16 117.31) (width 0.3) (layer B.Cu) (net 4) (tstamp 62A7609E))
+  (segment (start 211.215415 90.25) (end 207.63497 93.830445) (width 0.3) (layer B.Cu) (net 4) (tstamp 62A760A1))
+  (segment (start 207.63497 93.830445) (end 207.63497 115.78497) (width 0.3) (layer B.Cu) (net 4) (tstamp 62A760A3))
+  (segment (start 212.20998 89.25002) (end 211.215415 90.244585) (width 0.3) (layer B.Cu) (net 4))
+  (segment (start 223.191378 89.25002) (end 212.20998 89.25002) (width 0.3) (layer B.Cu) (net 4))
+  (segment (start 224.26 88.181398) (end 223.191378 89.25002) (width 0.3) (layer B.Cu) (net 4))
+  (segment (start 224.26 43.15) (end 224.26 88.181398) (width 0.3) (layer B.Cu) (net 4))
+  (segment (start 212.51 117.31) (end 240.51 117.31) (width 0.3) (layer B.Cu) (net 4))
+  (segment (start 208.08498 109.83498) (end 209.79 111.54) (width 0.3) (layer B.Cu) (net 5) (tstamp 62A7609D))
+  (segment (start 209.79 111.54) (end 212.51 111.54) (width 0.3) (layer B.Cu) (net 5) (tstamp 62A760A4))
+  (segment (start 208.08498 94.216845) (end 208.08498 109.83498) (width 0.3) (layer B.Cu) (net 5) (tstamp 62A760A5))
+  (segment (start 210.951825 91.35) (end 208.08498 94.216845) (width 0.3) (layer B.Cu) (net 5) (tstamp 62A760A6))
+  (segment (start 224.76 87.847097) (end 224.76 87.76) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 224.76 43.15) (end 224.76 87.76) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 210.951825 91.328175) (end 212.42997 89.85003) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 223.357067 89.85003) (end 224.76 88.447097) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 212.42997 89.85003) (end 223.357067 89.85003) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 224.76 87.76) (end 224.76 88.447097) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 212.51 111.54) (end 240.51 111.54) (width 0.3) (layer B.Cu) (net 5))
+  (segment (start 210.06 105.77) (end 212.51 105.77) (width 0.3) (layer B.Cu) (net 6) (tstamp 62A760AA))
+  (segment (start 208.58499 94.553244) (end 208.689117 94.449117) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 208.58499 104.81) (end 208.58499 94.553244) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 209.54499 105.77) (end 208.58499 104.81) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 212.51 105.77) (end 209.54499 105.77) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 210.688235 92.45) (end 208.689117 94.449117) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 212.67996 90.45004) (end 210.688235 92.441765) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 223.522756 90.45004) (end 212.67996 90.45004) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 225.26 88.712796) (end 223.522756 90.45004) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 225.26 43.15) (end 225.26 88.712796) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 212.51 105.77) (end 240.51 105.77) (width 0.3) (layer B.Cu) (net 6))
+  (segment (start 209.01 99.12) (end 209.89 100) (width 0.3) (layer B.Cu) (net 7) (tstamp 62A760B9))
+  (segment (start 212.51 100) (end 209.89 100) (width 0.3) (layer B.Cu) (net 7) (tstamp 62A760BA))
+  (segment (start 210.46 93.55) (end 209.01 95) (width 0.3) (layer B.Cu) (net 7) (tstamp 62A760BC))
+  (segment (start 209.01 99.12) (end 209.01 95) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 225.76 87.8) (end 225.76 43.15) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 225.76 89.005699) (end 225.76 87.8) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 223.715649 91.05005) (end 225.76 89.005699) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 212.94995 91.05005) (end 223.715649 91.05005) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 210.46 93.54) (end 212.94995 91.05005) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 212.51 100) (end 240.51 100) (width 0.3) (layer B.Cu) (net 7))
+  (segment (start 216.01 93.49) (end 216.01 97.115) (width 0.3) (layer F.Cu) (net 8) (tstamp 62A760B7))
+  (via (at 216.01 93.49) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 8))
+  (segment (start 216.01 97.115) (end 216.01 137.505) (width 0.3) (layer F.Cu) (net 8))
+  (segment (start 216.01 93.49) (end 216.01 92.60006) (width 0.3) (layer B.Cu) (net 8))
+  (segment (start 223.95994 91.55006) (end 226.26 89.25) (width 0.3) (layer B.Cu) (net 8))
+  (segment (start 217.06 91.55006) (end 223.95994 91.55006) (width 0.3) (layer B.Cu) (net 8))
+  (segment (start 216.01 92.60006) (end 217.06 91.55006) (width 0.3) (layer B.Cu) (net 8))
+  (segment (start 226.26 43.15) (end 226.26 89.25) (width 0.3) (layer B.Cu) (net 8))
+  (via (at 223.01 93.92) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 9))
+  (segment (start 223.01 93.92) (end 223.01 97.115) (width 0.3) (layer F.Cu) (net 9))
+  (segment (start 223.01 97.115) (end 223.01 137.505) (width 0.3) (layer F.Cu) (net 9))
+  (segment (start 223.01 93.92) (end 223.01 93.20712) (width 0.3) (layer B.Cu) (net 9))
+  (segment (start 226.76 89.45712) (end 226.76 89.19) (width 0.3) (layer B.Cu) (net 9))
+  (segment (start 223.01 93.20712) (end 226.76 89.45712) (width 0.3) (layer B.Cu) (net 9))
+  (segment (start 226.76 43.15) (end 226.76 89.19) (width 0.3) (layer B.Cu) (net 9))
+  (segment (start 230.01 94.25) (end 230.01 97.115) (width 0.3) (layer F.Cu) (net 10) (tstamp 62A760C9))
+  (via (at 230.01 94.25) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 10))
+  (segment (start 230.01 94.06) (end 230.01 94.25) (width 0.3) (layer B.Cu) (net 10))
+  (segment (start 230.01 97.115) (end 230.01 137.505) (width 0.3) (layer F.Cu) (net 10))
+  (segment (start 230.01 92.98) (end 227.26 90.23) (width 0.3) (layer B.Cu) (net 10))
+  (segment (start 230.01 94.25) (end 230.01 92.98) (width 0.3) (layer B.Cu) (net 10))
+  (segment (start 227.26 43.15) (end 227.26 90.23) (width 0.3) (layer B.Cu) (net 10))
+  (segment (start 237.01 93.9) (end 237.01 97.115) (width 0.3) (layer F.Cu) (net 11) (tstamp 62A760D1))
+  (via (at 237.01 93.9) (size 0.7) (drill 0.3) (layers F.Cu B.Cu) (net 11))
+  (segment (start 237.01 97.115) (end 237.01 137.505) (width 0.3) (layer F.Cu) (net 11))
+  (segment (start 237.01 92.53) (end 237.01 93.9) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 236.04 91.56) (end 237.01 92.53) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 229.46 91.56) (end 236.04 91.56) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 227.76 89.86) (end 229.46 91.56) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 227.76 43.15) (end 227.76 89.86) (width 0.3) (layer B.Cu) (net 11))
+  (segment (start 213.91 88.9) (end 207.61 95.2) (width 3.8) (layer F.Cu) (net 12))
+  (segment (start 207.61 95.2) (end 207.61 88.2) (width 3.8) (layer F.Cu) (net 12))
+  (segment (start 207.61 139.55) (end 207.61 95.2) (width 3.8) (layer F.Cu) (net 12))
+  (segment (start 214.69 89.12) (end 210.66 89.12) (width 5.7) (layer F.Cu) (net 12))
+  (segment (start 207.61 88.2) (end 209.96 88.2) (width 3.8) (layer F.Cu) (net 12))
+  (segment (start 225.38 55.15) (end 225.4 55.13) (width 5.5) (layer F.Cu) (net 12))
+  (segment (start 225.53 89.02) (end 225.53 55.05) (width 5.85) (layer F.Cu) (net 12))
+  (segment (start 239.29 89.12) (end 225.38 89.12) (width 5.7) (layer F.Cu) (net 12))
+  (segment (start 225.38 89.12) (end 214.69 89.12) (width 5.7) (layer F.Cu) (net 12))
+  (segment (start 225.53 55.15) (end 225.53 47.36) (width 5.85) (layer F.Cu) (net 12))
+  (segment (start 223.43 47.36) (end 225.53 47.36) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223.07 45.8) (end 224.31 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.95 47.36) (end 225.53 47.36) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 228.32 45.25) (end 227.63 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 228.32 44.56) (end 227.63 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 228.32 47.52) (end 228.32 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 227.25 44.71) (end 228.21 45.67) (width 0.5) (layer F.Cu) (net 12))
+  (segment (start 226.92 44.56) (end 227.36 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 227.63 44.56) (end 226.92 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 226.73 44.56) (end 226.79 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 226.92 44.56) (end 226.73 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 226.73 44.56) (end 224.31 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.76 44.56) (end 224.35 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.75 45.78) (end 222.84 45.78) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 224.06 44.56) (end 224.31 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.84 45.78) (end 224.06 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.84 46.17) (end 222.75 46.26) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.84 45.78) (end 222.84 46.17) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.75 46.26) (end 222.75 45.78) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.75 48.19) (end 222.75 46.26) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.75 45.78) (end 222.75 44.95) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.75 44.95) (end 222.75 44.56) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223 45.37) (end 223 45.19) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223.01 44.76) (end 223.04 44.73) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223 45.19) (end 223.01 45.18) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223.04 44.73) (end 223.6 44.73) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223.01 45.18) (end 223.01 44.76) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 223.42 44.95) (end 223 45.37) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.75 44.95) (end 223.42 44.95) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.84 45.53) (end 223 45.37) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 222.84 45.78) (end 222.84 45.53) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 226.13501 46.75499) (end 225.53 47.36) (width 0.3) (layer F.Cu) (net 12))
+  (segment (start 226.9 44.81) (end 227.86 45.77) (width 0.5) (layer F.Cu) (net 12) (tstamp 62A8EEB9))
+  (segment (start 227.15 45.03) (end 228.11 45.99) (width 0.5) (layer F.Cu) (net 12) (tstamp 62A8EEB9))
 
 )

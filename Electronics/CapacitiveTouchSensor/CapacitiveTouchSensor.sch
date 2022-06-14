@@ -46,6 +46,15 @@ Text GLabel 5100 3050 2    50   Input ~ 0
 10
 Text GLabel 5100 3150 2    50   Input ~ 0
 11
-Text GLabel 5100 3250 2    50   Input ~ 0
-12
+$Comp
+L power:GND #PWR?
+U 1 1 62A75F98
+P 5100 3250
+F 0 "#PWR?" H 5100 3000 50  0001 C CNN
+F 1 "GND" H 5105 3077 50  0000 C CNN
+F 2 "" H 5100 3250 50  0001 C CNN
+F 3 "" H 5100 3250 50  0001 C CNN
+	1    5100 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
